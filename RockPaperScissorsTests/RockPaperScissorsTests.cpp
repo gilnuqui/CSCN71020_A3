@@ -29,5 +29,24 @@ namespace RockPaperScissorsTests
 
             Assert::AreEqual("Player2", result);
         }
+
+        TEST_METHOD(ScissorsBeatsPaper_Player1Wins)
+        {
+            char result[10];
+
+            determineWinner("Scissors", "Paper", result);
+
+            Assert::AreEqual("Player1", result);
+        }
+
+        TEST_METHOD(ScissorsLosesToRock_Player2Wins)
+        {
+            char result[10];
+
+            determineWinner("Scissors", "Rock", result);
+
+            Assert::AreEqual("Player2", result);
+        }
+
     };
 }
