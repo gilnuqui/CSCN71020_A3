@@ -93,5 +93,32 @@ namespace RockPaperScissorsTests
             Assert::AreEqual("Draw", result);
         }
 
+        TEST_METHOD(InvalidPlayer1Input_ReturnsInvalid)
+        {
+            char result[10];
+
+            determineWinner("Banana", "Rock", result);
+
+            Assert::AreEqual("Invalid", result);
+        }
+
+        TEST_METHOD(InvalidPlayer2Input_ReturnsInvalid)
+        {
+            char result[10];
+
+            determineWinner("Rock", "Banana", result);
+
+            Assert::AreEqual("Invalid", result);
+        }
+
+        TEST_METHOD(BothPlayersInvalid_ReturnsInvalid)
+        {
+            char result[10];
+
+            determineWinner("Banana", "Apple", result);
+
+            Assert::AreEqual("Invalid", result);
+        }
+
     };
 }
