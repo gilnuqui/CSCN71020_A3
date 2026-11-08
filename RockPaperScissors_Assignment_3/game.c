@@ -8,4 +8,9 @@ void determineWinner(const char player1[], const char player2[], char result[])
     {
         strcpy_s(result, 10, "Player1");
     }
+    else if (strcmp(player1, "Rock") == 0 &&
+        strcmp(player2, "Paper") == 0)
+    {
+        strcpy_s(result, 10, "Player2");
+    }
 }
