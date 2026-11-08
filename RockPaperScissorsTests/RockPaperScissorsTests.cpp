@@ -66,5 +66,32 @@ namespace RockPaperScissorsTests
             Assert::AreEqual("Player2", result);
         }
 
+        TEST_METHOD(RockVsRock_Draw)
+        {
+            char result[10];
+
+            determineWinner("Rock", "Rock", result);
+
+            Assert::AreEqual("Draw", result);
+        }
+
+        TEST_METHOD(PaperVsPaper_Draw)
+        {
+            char result[10];
+
+            determineWinner("Paper", "Paper", result);
+
+            Assert::AreEqual("Draw", result);
+        }
+
+        TEST_METHOD(ScissorsVsScissors_Draw)
+        {
+            char result[10];
+
+            determineWinner("Scissors", "Scissors", result);
+
+            Assert::AreEqual("Draw", result);
+        }
+
     };
 }
