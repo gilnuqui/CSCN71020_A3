@@ -119,6 +119,14 @@ namespace RockPaperScissorsTests
 
             Assert::AreEqual("Invalid", result);
         }
+        TEST_METHOD(LowercaseInput_ReturnsInvalid)
+        {
+            char result[10];
+
+            determineWinner("rock", "Scissors", result);
+
+            Assert::AreEqual("Invalid", result);
+        }
 
     };
 }
